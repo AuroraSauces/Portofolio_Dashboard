@@ -1,0 +1,59 @@
+---
+// Projects Section Component
+interface Project {
+  name: string;
+  desc: string;
+  img: string;
+  url: string;
+}
+
+interface Props {
+  projects: Project[];
+}
+
+const { projects } = Astro.props;
+---
+
+<section id="projects" class="max-w-5xl mx-auto mt-24 md:mt-32 px-4 md:px-6 scroll-mt-24">
+  <div class="text-center mb-12 md:mb-16">
+    <h2 class="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 mb-4">
+      My Projects
+    </h2>
+    <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto rounded-full"></div>
+  </div>
+
+  <div class="grid sm:grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
+    {projects.map((p) => (
+      <div
+        class="relative group border border-gray-700 rounded-2xl overflow-hidden bg-gray-800 hover:border-cyan-400 transition duration-500 shadow-lg hover:shadow-cyan-500/30"
+      >
+        <div class="relative overflow-hidden">
+          <img
+            src={p.img}
+            alt={p.name}
+            class="w-full h-48 md:h-64 object-cover transform group-hover:scale-110 transition duration-500 ease-out"
+          />
+
+          <a
+            href={p.url}
+            target="_blank"
+            rel="noopener"
+            class="absolute inset-0 flex justify-center items-center bg-black/60 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-500"
+          >
+            <span
+              class="inline-flex items-center gap-2 bg-cyan-500/20 text-cyan-300 px-4 py-2 rounded-full border border-cyan-400 hover:bg-cyan-500/30 transition"
+            >
+              <i class="fa-brands fa-github"></i>
+              View Repository
+            </span>
+          </a>
+        </div>
+
+        <div class="p-4 md:p-6 text-center">
+          <h3 class="text-xl md:text-2xl font-semibold mb-2 md:mb-3 text-cyan-400">{p.name}</h3>
+          <p class="text-gray-400 leading-relaxed text-sm md:text-base">{p.desc}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>

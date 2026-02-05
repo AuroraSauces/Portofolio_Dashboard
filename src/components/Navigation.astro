@@ -1,0 +1,21 @@
+---
+// Navigation Component
+---
+
+<nav
+  class="fixed top-5 left-1/2 transform -translate-x-1/2 bg-gray-900/80 backdrop-blur-md rounded-full px-4 md:px-8 py-3 flex gap-4 md:gap-8 text-gray-300 shadow-lg z-50 text-sm md:text-base"
+>
+  <button data-scroll="hero" data-section="hero" class="nav-item hover:text-cyan-400 transition cursor-pointer whitespace-nowrap px-3 py-1 rounded-full">Home</button>
+  <button data-scroll="about" data-section="about" class="nav-item hover:text-cyan-400 transition cursor-pointer whitespace-nowrap px-3 py-1 rounded-full">About</button>
+  <button data-scroll="skills" data-section="skills" class="nav-item hover:text-cyan-400 transition cursor-pointer whitespace-nowrap px-3 py-1 rounded-full">Skills</button>
+  <button data-scroll="projects" data-section="projects" class="nav-item hover:text-cyan-400 transition cursor-pointer whitespace-nowrap px-3 py-1 rounded-full">Projects</button>
+  <button data-scroll="contact" data-section="contact" class="nav-item hover:text-cyan-400 transition cursor-pointer whitespace-nowrap px-3 py-1 rounded-full">Contact</button>
+</nav>
+
+<style>
+  .nav-item.active {
+    background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
+    color: white;
+    font-weight: 600;
+  }
+</style>

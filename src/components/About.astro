@@ -1,0 +1,103 @@
+---
+// About Section Component
+---
+
+<section id="about" class="max-w-7xl mx-auto mt-24 md:mt-32 px-4 md:px-6 scroll-mt-24">
+  <div
+    class="border border-gray-700 bg-gray-800/60 backdrop-blur-sm rounded-2xl shadow-lg overflow-hidden hover:border-cyan-400 transition duration-300 transform hover:scale-[1.01]"
+  >
+    <!-- Profile Section -->
+    <div class="flex flex-col lg:flex-row items-center lg:items-start gap-8 md:gap-12 p-6 md:p-10">
+      <div class="flex-shrink-0 flex justify-center">
+        <div class="relative">
+          <img
+            src="/images/profile.jpg"
+            alt="Profile Photo"
+            class="w-40 h-40 md:w-52 md:h-52 rounded-full object-cover border-4 border-cyan-400 shadow-2xl"
+          />
+          <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-cyan-400/20 to-blue-500/20"></div>
+        </div>
+      </div>
+
+      <div class="flex-1 space-y-6 md:space-y-8 lg:pl-6 w-full">
+        <!-- Main About Section -->
+        <div class="space-y-4 md:space-y-6">
+          <div class="text-center lg:text-left mb-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 mb-4">
+              About Me
+            </h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto lg:mx-0 rounded-full"></div>
+          </div>
+          <div class="bg-gray-900/30 rounded-xl p-6 md:p-8 border border-gray-700/50">
+            <p class="text-gray-300 leading-relaxed text-base md:text-lg mb-4 md:mb-6">
+              I am a passionate Computer Science student at Politeknik Negeri Malang with a deep fascination for full-stack development, 
+              ranging from frontend user interfaces to backend systems and game development. My journey in technology began with curiosity 
+              about how digital experiences are crafted, which has evolved into a comprehensive understanding of the entire development stack 
+              and modern programming paradigms.
+            </p>
+            <p class="text-gray-300 leading-relaxed text-base md:text-lg mb-4 md:mb-6">
+              Throughout my academic journey, I have developed a strong foundation in various programming languages and frameworks across 
+              the full development spectrum. I thrive on solving complex problems through clean, efficient code, whether I'm crafting 
+              intuitive user interfaces, building robust backend APIs, or creating immersive gaming experiences. My approach to development 
+              emphasizes both technical excellence and user experience, ensuring that every project delivers meaningful value.
+            </p>
+            <p class="text-gray-300 leading-relaxed text-base md:text-lg">
+              I am particularly drawn to the intersection of creativity and technology, where I can combine my technical skills across 
+              frontend, backend, and game development to create comprehensive solutions. From responsive web applications to scalable 
+              server architectures and interactive gaming experiences, I believe in continuous learning and staying updated with the 
+              latest industry trends and best practices across all development domains.
+            </p>
+          </div>
+        </div>
+
+        <!-- Interests & Goals Grid -->
+        <div class="grid md:grid-cols-2 gap-6 md:gap-8">
+          <div class="bg-gray-900/30 rounded-xl p-6 md:p-8 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
+            <div class="flex items-center gap-2 mb-4 md:mb-6">
+              <i class="fa-solid fa-heart text-cyan-400 text-lg"></i>
+              <h3 class="text-lg md:text-xl font-semibold text-cyan-300">Interests & Hobbies</h3>
+            </div>
+            <p class="text-gray-300 leading-relaxed text-sm md:text-base">
+              Outside the world of coding, I enjoy playing various games across different genres, which not only provides entertainment but also 
+              inspires my game development projects by understanding player psychology and engagement mechanics. I'm an avid anime enthusiast and 
+              music lover, finding that these creative mediums often spark new ideas for my technical projects.
+            </p>
+          </div>
+
+          <div class="bg-gray-900/30 rounded-xl p-6 md:p-8 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
+            <div class="flex items-center gap-2 mb-4 md:mb-6">
+              <i class="fa-solid fa-rocket text-cyan-400 text-lg"></i>
+              <h3 class="text-lg md:text-xl font-semibold text-cyan-300">Goals & Aspirations</h3>
+            </div>
+            <p class="text-gray-300 leading-relaxed text-sm md:text-base">
+              My long-term goal is to become a versatile full-stack developer who can contribute to innovative projects across all development 
+              domains that make a positive impact on users' lives. I aspire to work on cutting-edge technologies spanning frontend interfaces, 
+              backend systems, and gaming experiences that can handle complex real-world challenges. I'm always open to collaboration and eager 
+              to contribute to open-source projects.
+            </p>
+          </div>
+        </div>
+
+        <!-- Fun Facts or Quick Stats -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+          <div class="text-center p-4 md:p-6 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-xl border border-cyan-500/20">
+            <div class="text-xl md:text-2xl font-bold text-cyan-400">2+</div>
+            <div class="text-xs md:text-sm text-gray-400">Years Coding</div>
+          </div>
+          <div class="text-center p-4 md:p-6 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-xl border border-purple-500/20">
+            <div class="text-xl md:text-2xl font-bold text-purple-400">10+</div>
+            <div class="text-xs md:text-sm text-gray-400">Projects</div>
+          </div>
+          <div class="text-center p-4 md:p-6 bg-gradient-to-br from-green-500/10 to-emerald-500/10 rounded-xl border border-green-500/20">
+            <div class="text-xl md:text-2xl font-bold text-green-400">5+</div>
+            <div class="text-xs md:text-sm text-gray-400">Technologies</div>
+          </div>
+          <div class="text-center p-4 md:p-6 bg-gradient-to-br from-orange-500/10 to-red-500/10 rounded-xl border border-orange-500/20">
+            <div class="text-xl md:text-2xl font-bold text-orange-400">∞</div>
+            <div class="text-xs md:text-sm text-gray-400">Passion</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
