@@ -11,8 +11,10 @@
       <p class="text-lg md:text-xl lg:text-2xl text-gray-300 mb-2">
         Informatics Engineering Student
       </p>
-      <p class="text-base md:text-lg text-gray-400">
-        Full Stack Developer & Game Development Enthusiast
+      <p class="text-base md:text-lg text-gray-300">
+        <span id="glitch-text" class="glitch-text" data-text="Full Stack Developer">
+          Full Stack Developer
+        </span>
       </p>
     </div>
     
@@ -75,12 +77,156 @@
   </div>
 </section>
 
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const target = document.getElementById('glitch-text');
+    if (!target) return;
+
+    const phrases = ['Full Stack Developer', 'Game Development Enthusiast'];
+    const longestPhraseLength = Math.max(...phrases.map((p) => p.length));
+    target.style.minWidth = `${longestPhraseLength}ch`;
+    target.style.display = 'inline-flex';
+    target.style.justifyContent = 'center';
+    target.style.textAlign = 'center';
+    const chars = '!<>-_\\/[]{}—=+*^?#________';
+    const holdDuration = 2600;
+    let frame = 0;
+    let queue = [];
+    let frameRequest;
+    let phraseIndex = 0;
+
+    const randomChar = () => chars[Math.floor(Math.random() * chars.length)];
+
+    const update = () => {
+      let output = '';
+      let complete = 0;
+
+      queue.forEach(item => {
+        if (frame >= item.end) {
+          complete++;
+          output += item.to;
+          return;
+        }
+
+        if (frame >= item.start) {
+          output += `<span class="glitch-char">${randomChar()}</span>`;
+          return;
+        }
+
+        output += item.from;
+      });
+
+      target.innerHTML = output;
+      target.setAttribute('data-text', phrases[phraseIndex]);
+      target.classList.add('glitching');
+
+      if (complete === queue.length) {
+        target.textContent = phrases[phraseIndex];
+        target.classList.remove('glitching');
+        setTimeout(nextPhrase, holdDuration);
+        return;
+      }
+
+      frame++;
+      frameRequest = requestAnimationFrame(update);
+    };
+
+    const setText = (newText) => {
+      const oldText = target.textContent || '';
+      const length = Math.max(oldText.length, newText.length);
+      queue = [];
+
+      for (let i = 0; i < length; i++) {
+        queue.push({
+          from: oldText[i] || '',
+          to: newText[i] || '',
+          start: Math.floor(Math.random() * 16),
+          end: Math.floor(Math.random() * 16) + 16,
+        });
+      }
+
+      cancelAnimationFrame(frameRequest);
+      frame = 0;
+      update();
+    };
+
+    const nextPhrase = () => {
+      phraseIndex = (phraseIndex + 1) % phrases.length;
+      setText(phrases[phraseIndex]);
+    };
+
+    setTimeout(nextPhrase, holdDuration);
+  });
+</script>
+
 <style>
   .hero-section {
     position: relative;
     min-height: 100vh;
     scroll-snap-align: start;
     scroll-snap-stop: always;
+  }
+
+  .glitch-text {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: #e5e7eb;
+    min-height: 1.5em;
+    padding: 0 0.35rem;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .glitch-text::before,
+  .glitch-text::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .glitch-text.glitching::before,
+  .glitch-text.glitching::after {
+    opacity: 0.8;
+    mix-blend-mode: screen;
+    animation: glitchDrift 0.35s infinite;
+  }
+
+  .glitch-text.glitching::before {
+    color: rgba(34, 211, 238, 0.9);
+    transform: translate(-1px, -1px);
+  }
+
+  .glitch-text.glitching::after {
+    color: rgba(59, 130, 246, 0.8);
+    transform: translate(1px, 1px);
+    animation-delay: 0.15s;
+  }
+
+  .glitch-char {
+    display: inline-block;
+    color: rgba(94, 234, 212, 0.9);
+    text-shadow:
+      0 0 6px rgba(59, 130, 246, 0.8),
+      0 0 12px rgba(14, 165, 233, 0.7);
+  }
+
+  @keyframes glitchDrift {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(2px, -2px);
+    }
+    100% {
+      transform: translate(-1px, 1px);
+    }
   }
 
   .hero-content {
