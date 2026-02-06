@@ -90,3 +90,26 @@ body {
   position: relative;
   z-index: 1;
 }
+
+/* Sparkle Cursor Trail */
+.sparkle {
+  position: fixed;
+  pointer-events: none;
+  background-image: radial-gradient(circle, #22d3ee 10%, transparent 80%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  animation: sparkle-fade 0.8s linear forwards;
+  z-index: 9999;
+}
+
+@keyframes sparkle-fade {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}

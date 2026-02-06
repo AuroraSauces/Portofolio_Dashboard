@@ -15,6 +15,33 @@ const { title = "Portofolio Astro" } = Astro.props;
 
   <body class="animated-bg text-gray-100 min-h-screen font-sans">
   <slot />
+  <script>
+    document.addEventListener('mousemove', function(e) {
+      const sparkle = document.createElement('div');
+      sparkle.classList.add('sparkle');
+      
+      // Add some randomness to position to make it look like a trail
+      const offsetX = (Math.random() - 0.5) * 10;
+      const offsetY = (Math.random() - 0.5) * 10;
+      
+      sparkle.style.left = (e.clientX + offsetX) + 'px';
+      sparkle.style.top = (e.clientY + offsetY) + 'px';
+      
+      // Random size variation
+      const size = Math.random() * 8 + 4; // 4px to 12px
+      sparkle.style.width = size + 'px';
+      sparkle.style.height = size + 'px';
+      
+      // Random color slight variation (Cyan to Blue)
+      const colors = ['#22d3ee', '#3b82f6', '#a855f7']; 
+      sparkle.style.backgroundImage = `radial-gradient(circle, ${colors[Math.floor(Math.random() * colors.length)]} 10%, transparent 80%)`;
+
+      document.body.appendChild(sparkle);
+
+      setTimeout(() => {
+        sparkle.remove();
+      }, 800);
+    });
+  </script>
 </body>
-  </body>
 </html>

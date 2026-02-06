@@ -2,103 +2,193 @@
 // About Section Component
 ---
 
-<section id="about" class="max-w-7xl mx-auto mt-24 md:mt-32 px-4 md:px-6 scroll-mt-24">
-  <div
-    class="border border-gray-700 bg-gray-800/60 backdrop-blur-sm rounded-2xl shadow-lg overflow-hidden hover:border-cyan-400 transition duration-300 transform hover:scale-[1.01]"
-  >
-    <!-- Profile Section -->
-    <div class="flex flex-col lg:flex-row items-center lg:items-start gap-8 md:gap-12 p-6 md:p-10">
-      <div class="flex-shrink-0 flex justify-center">
-        <div class="relative">
-          <img
+<section id="about" class="max-w-7xl mx-auto mt-24 md:mt-32 px-4 md:px-6 scroll-mt-24 relative overflow-hidden">
+  
+  <!-- Tech Grid Background Removed -->
+
+  <!-- Section Title -->
+  <div class="text-center mb-16 relative z-10">
+    <div class="inline-block relative">
+       <h2 class="text-4xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 tracking-tighter drop-shadow-lg">
+          ABOUT ME
+       </h2>
+       <!-- Decoration Lines -->
+       <div class="absolute -bottom-2 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-cyan-500 to-transparent"></div>
+       <div class="absolute -bottom-2 left-1/2 w-2 h-2 bg-cyan-400 rounded-full transform -translate-x-1/2 shadow-[0_0_10px_rgba(34,211,238,0.8)]"></div>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start relative z-10">
+    
+    <!-- Left Column: Profile Card (Premium Glass) -->
+    <div class="lg:col-span-4 perspective-1000">
+      <div 
+        class="card-spotlight relative bg-slate-900/60 backdrop-blur-2xl border border-white/10 rounded-3xl p-8 flex flex-col items-center text-center shadow-[0_0_30px_rgba(0,0,0,0.3)] transition-all duration-300 hover:border-cyan-500/30 group h-full"
+        data-tilt
+      >
+        <!-- Spotlight Overlay -->
+        <div class="pointer-events-none absolute -inset-px opacity-0 group-hover:opacity-100 transition duration-300"
+             style="background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(34,211,238,0.1), transparent 40%);">
+        </div>
+
+        <!-- Tech Corners -->
+        <div class="absolute top-4 left-4 w-4 h-4 border-t-2 border-l-2 border-cyan-500/30 rounded-tl-lg"></div>
+        <div class="absolute top-4 right-4 w-4 h-4 border-t-2 border-r-2 border-cyan-500/30 rounded-tr-lg"></div>
+        <div class="absolute bottom-4 left-4 w-4 h-4 border-b-2 border-l-2 border-cyan-500/30 rounded-bl-lg"></div>
+        <div class="absolute bottom-4 right-4 w-4 h-4 border-b-2 border-r-2 border-cyan-500/30 rounded-br-lg"></div>
+
+        <!-- Profile Image Wrapper -->
+        <div class="relative w-56 h-56 mb-8 group-hover:scale-105 transition-transform duration-500">
+           <div class="absolute inset-0 rounded-full border border-cyan-500/30 animate-spin-slow-reverse blur-sm"></div>
+           <div class="absolute inset-0 rounded-full border border-purple-500/30 animate-spin-slow blur-sm"></div>
+           <div class="absolute inset-4 rounded-full border border-dashed border-white/20 animate-spin-slow"></div>
+           <img
             src="/images/profile.jpg"
             alt="Profile Photo"
             loading="lazy"
-            class="w-40 h-40 md:w-52 md:h-52 rounded-full object-cover border-4 border-cyan-400 shadow-2xl"
+            class="w-full h-full rounded-full object-cover p-3 ring-1 ring-white/10"
           />
-          <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-cyan-400/20 to-blue-500/20"></div>
-        </div>
-      </div>
-
-      <div class="flex-1 space-y-6 md:space-y-8 lg:pl-6 w-full">
-        <!-- Main About Section -->
-        <div class="space-y-4 md:space-y-6">
-          <div class="text-center lg:text-left mb-8">
-            <h2 class="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 mb-4">
-              About Me
-            </h2>
-            <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto lg:mx-0 rounded-full"></div>
-          </div>
-          <div class="bg-gray-900/30 rounded-xl p-6 md:p-8 border border-gray-700/50">
-            <p class="text-gray-300 leading-relaxed text-base md:text-lg mb-4 md:mb-6">
-              I am a passionate Informatics Engineering student at Politeknik Negeri Malang with a deep fascination for full-stack development, 
-              ranging from frontend user interfaces to backend systems and game development. My journey in technology began with curiosity 
-              about how digital experiences are crafted, which has evolved into a comprehensive understanding of the entire development stack 
-              and modern programming paradigms.
-            </p>
-            <p class="text-gray-300 leading-relaxed text-base md:text-lg mb-4 md:mb-6">
-              Throughout my academic journey, I have developed a strong foundation in various programming languages and frameworks across 
-              the full development spectrum. I thrive on solving complex problems through clean, efficient code, whether I'm crafting 
-              intuitive user interfaces, building robust backend APIs, or creating immersive gaming experiences. My approach to development 
-              emphasizes both technical excellence and user experience, ensuring that every project delivers meaningful value.
-            </p>
-            <p class="text-gray-300 leading-relaxed text-base md:text-lg">
-              I am particularly drawn to the intersection of creativity and technology, where I can combine my technical skills across 
-              frontend, backend, and game development to create comprehensive solutions. From responsive web applications to scalable 
-              server architectures and interactive gaming experiences, I believe in continuous learning and staying updated with the 
-              latest industry trends and best practices across all development domains.
-            </p>
-          </div>
         </div>
 
-        <!-- Interests & Goals Grid -->
-        <div class="grid md:grid-cols-2 gap-6 md:gap-8">
-          <div class="bg-gray-900/30 rounded-xl p-6 md:p-8 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
-            <div class="flex items-center gap-2 mb-4 md:mb-6">
-              <i class="fa-solid fa-heart text-cyan-400 text-lg"></i>
-              <h3 class="text-lg md:text-xl font-semibold text-cyan-300">Interests & Hobbies</h3>
-            </div>
-            <p class="text-gray-300 leading-relaxed text-sm md:text-base">
-              Outside the world of coding, I enjoy playing various games across different genres, which not only provides entertainment but also 
-              inspires my game development projects by understanding player psychology and engagement mechanics. I'm an avid anime enthusiast and 
-              music lover, finding that these creative mediums often spark new ideas for my technical projects.
-            </p>
-          </div>
-
-          <div class="bg-gray-900/30 rounded-xl p-6 md:p-8 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
-            <div class="flex items-center gap-2 mb-4 md:mb-6">
-              <i class="fa-solid fa-rocket text-cyan-400 text-lg"></i>
-              <h3 class="text-lg md:text-xl font-semibold text-cyan-300">Goals & Aspirations</h3>
-            </div>
-            <p class="text-gray-300 leading-relaxed text-sm md:text-base">
-              My long-term goal is to become a versatile full-stack developer who can contribute to innovative projects across all development 
-              domains that make a positive impact on users' lives. I aspire to work on cutting-edge technologies spanning frontend interfaces, 
-              backend systems, and gaming experiences that can handle complex real-world challenges. I'm always open to collaboration and eager 
-              to contribute to open-source projects.
-            </p>
-          </div>
+        <h3 class="text-3xl font-bold text-white mb-2 tracking-wide">Satria</h3>
+        <span class="px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-semibold tracking-wider mb-8">
+           FULL STACK DEVELOPER
+        </span>
+        
+        <!-- Quick Stats Grid (Vertical Split) -->
+        <div class="w-full space-y-4">
+           <div class="grid grid-cols-2 gap-3 w-full">
+               <div class="p-4 bg-black/20 rounded-2xl border border-white/5 hover:bg-cyan-500/5 transition-colors group/stat">
+                  <span class="block text-2xl font-bold text-white group-hover/stat:text-cyan-400 transition-colors">2+</span>
+                  <span class="text-[10px] text-gray-500 uppercase tracking-[0.1em] font-bold mt-1">Years Coding</span>
+               </div>
+               <div class="p-4 bg-black/20 rounded-2xl border border-white/5 hover:bg-purple-500/5 transition-colors group/stat">
+                  <span class="block text-2xl font-bold text-white group-hover/stat:text-purple-400 transition-colors">10+</span>
+                  <span class="text-[10px] text-gray-500 uppercase tracking-[0.1em] font-bold mt-1">Projects</span>
+               </div>
+           </div>
+           <div class="grid grid-cols-2 gap-3 w-full">
+               <div class="p-4 bg-black/20 rounded-2xl border border-white/5 hover:bg-emerald-500/5 transition-colors group/stat">
+                  <span class="block text-2xl font-bold text-white group-hover/stat:text-emerald-400 transition-colors">5+</span>
+                  <span class="text-[10px] text-gray-500 uppercase tracking-[0.1em] font-bold mt-1">Tech Stack</span>
+               </div>
+               <div class="p-4 bg-black/20 rounded-2xl border border-white/5 hover:bg-orange-500/5 transition-colors group/stat">
+                  <span class="block text-2xl font-bold text-white group-hover/stat:text-orange-400 transition-colors">∞</span>
+                  <span class="text-[10px] text-gray-500 uppercase tracking-[0.1em] font-bold mt-1">Passion</span>
+               </div>
+           </div>
         </div>
 
-        <!-- Fun Facts or Quick Stats -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-          <div class="text-center p-4 md:p-6 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-xl border border-cyan-500/20">
-            <div class="text-xl md:text-2xl font-bold text-cyan-400">2+</div>
-            <div class="text-xs md:text-sm text-gray-400">Years Coding</div>
-          </div>
-          <div class="text-center p-4 md:p-6 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-xl border border-purple-500/20">
-            <div class="text-xl md:text-2xl font-bold text-purple-400">10+</div>
-            <div class="text-xs md:text-sm text-gray-400">Projects</div>
-          </div>
-          <div class="text-center p-4 md:p-6 bg-gradient-to-br from-green-500/10 to-emerald-500/10 rounded-xl border border-green-500/20">
-            <div class="text-xl md:text-2xl font-bold text-green-400">5+</div>
-            <div class="text-xs md:text-sm text-gray-400">Technologies</div>
-          </div>
-          <div class="text-center p-4 md:p-6 bg-gradient-to-br from-orange-500/10 to-red-500/10 rounded-xl border border-orange-500/20">
-            <div class="text-xl md:text-2xl font-bold text-orange-400">∞</div>
-            <div class="text-xs md:text-sm text-gray-400">Passion</div>
-          </div>
-        </div>
       </div>
     </div>
+
+    <!-- Right Column: Biography & Details -->
+    <div class="lg:col-span-8 space-y-6">
+       <!-- Bio Card (Preserving Full Text) -->
+       <div class="card-spotlight relative bg-slate-900/40 backdrop-blur-xl border border-white/5 rounded-3xl p-8 group overflow-hidden">
+          <!-- Spotlight Overlay -->
+          <div class="pointer-events-none absolute -inset-px opacity-0 group-hover:opacity-100 transition duration-300"
+             style="background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(139,92,246,0.1), transparent 40%);">
+          </div>
+          
+          <div class="flex items-center gap-4 mb-6 border-b border-white/5 pb-4">
+             <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-600/20 border border-cyan-500/30 flex items-center justify-center text-cyan-400 shadow-[0_0_15px_rgba(34,211,238,0.2)]">
+                <i class="fa-solid fa-terminal text-xl"></i>
+             </div>
+             <h3 class="text-2xl font-bold text-white">Who I Am</h3>
+          </div>
+
+          <div class="space-y-6 text-gray-300 leading-relaxed text-base md:text-lg">
+             <p>
+                I am a passionate <span class="text-cyan-300 font-medium">Informatics Engineering student</span> at Politeknik Negeri Malang with a deep fascination for full-stack development, ranging from frontend user interfaces to backend systems and game development. My journey in technology began with curiosity about how digital experiences are crafted, which has evolved into a comprehensive understanding of the entire development stack and modern programming paradigms.
+             </p>
+             <p>
+                Throughout my academic journey, I have developed a strong foundation in various programming languages and frameworks across the full development spectrum. I thrive on solving complex problems through clean, efficient code, whether I'm crafting intuitive user interfaces, building robust backend APIs, or creating immersive gaming experiences. My approach to development emphasizes both technical excellence and user experience, ensuring that every project delivers meaningful value.
+             </p>
+             <p>
+                I am particularly drawn to the intersection of creativity and technology, where I can combine my technical skills across frontend, backend, and game development to create comprehensive solutions. From responsive web applications to scalable server architectures and interactive gaming experiences, I believe in continuous learning and staying updated with the latest industry trends and best practices across all development domains.
+             </p>
+          </div>
+       </div>
+
+       <!-- Interests & Goals Split -->
+       <div class="grid md:grid-cols-2 gap-6">
+          <!-- Hobbies -->
+          <div class="card-spotlight relative bg-slate-900/40 backdrop-blur-xl border border-white/5 rounded-3xl p-8 group hover:border-purple-500/30 transition-colors h-full">
+              <div class="pointer-events-none absolute -inset-px opacity-0 group-hover:opacity-100 transition duration-300"
+                style="background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(168,85,247,0.1), transparent 40%);">
+              </div>
+
+             <h4 class="text-lg font-bold text-white mb-4 flex items-center gap-3">
+                <i class="fa-solid fa-gamepad text-purple-400"></i>
+                <span class="group-hover:text-purple-400 transition-colors">Interests & Hobbies</span>
+             </h4>
+             <p class="text-gray-400 text-sm leading-relaxed">
+                Outside the world of coding, I enjoy playing various games across different genres, which not only provides entertainment but also inspires my game development projects by understanding player psychology and engagement mechanics. I'm an avid anime enthusiast and music lover, finding that these creative mediums often spark new ideas for my technical projects.
+             </p>
+          </div>
+
+          <!-- Goals -->
+          <div class="card-spotlight relative bg-slate-900/40 backdrop-blur-xl border border-white/5 rounded-3xl p-8 group hover:border-cyan-500/30 transition-colors h-full">
+              <div class="pointer-events-none absolute -inset-px opacity-0 group-hover:opacity-100 transition duration-300"
+                style="background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(34,211,238,0.1), transparent 40%);">
+              </div>
+
+             <h4 class="text-lg font-bold text-white mb-4 flex items-center gap-3">
+                <i class="fa-solid fa-rocket text-cyan-400"></i>
+                <span class="group-hover:text-cyan-400 transition-colors">Goals & Aspirations</span>
+             </h4>
+             <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                My long-term goal is to become a versatile full-stack developer who can contribute to innovative projects across all development domains that make a positive impact on users' lives. I aspire to work on cutting-edge technologies spanning frontend interfaces, backend systems, and gaming experiences that can handle complex real-world challenges. I'm always open to collaboration and eager to contribute to open-source projects.
+             </p>
+             <div class="w-full h-1 bg-gray-800 rounded-full overflow-hidden mt-4">
+                <div class="h-full w-3/4 bg-gradient-to-r from-cyan-500 to-blue-500 animate-pulse"></div>
+             </div>
+             <p class="text-[10px] text-cyan-400 mt-2 text-right">SYSTEM UPGRADE IN PROGRESS...</p>
+          </div>
+       </div>
+    </div>
   </div>
-  </section>
+
+  <!-- Background Decorative Blurs -->
+  <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[100px] pointer-events-none mix-blend-screen"></div>
+  <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[100px] pointer-events-none mix-blend-screen"></div>
+
+</section>
+
+<style>
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  
+  @keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  @keyframes spin-slow-reverse {
+    from { transform: rotate(360deg); }
+    to { transform: rotate(0deg); }
+  }
+  .animate-spin-slow {
+    animation: spin-slow 12s linear infinite;
+  }
+  .animate-spin-slow-reverse {
+    animation: spin-slow-reverse 15s linear infinite;
+  }
+</style>
+
+<script>
+  // Mouse Move Effect for Spotlight
+  const cards = document.querySelectorAll(".card-spotlight");
+  
+  cards.forEach(card => {
+    card.addEventListener("mousemove", (e) => {
+      const rect = (card as HTMLElement).getBoundingClientRect();
+      const x = (e as MouseEvent).clientX - rect.left;
+      const y = (e as MouseEvent).clientY - rect.top;
+      
+      (card as HTMLElement).style.setProperty("--mouse-x", `${x}px`);
+      (card as HTMLElement).style.setProperty("--mouse-y", `${y}px`);
+    });
+  });
+</script>

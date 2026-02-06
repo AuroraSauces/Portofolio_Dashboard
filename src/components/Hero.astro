@@ -3,56 +3,127 @@
 ---
 
 <section id="hero" class="hero-section h-screen flex items-center justify-center relative overflow-hidden">
-  <div class="hero-content text-center px-4 md:px-6 z-10">
-    <div class="mb-8 animate-fade-in">
-      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 mb-4 px-2 md:px-4 leading-tight py-2">
-        Hello I'm Satria Wiguna
-      </h1>
-      <p class="text-lg md:text-xl lg:text-2xl text-gray-300 mb-2">
-        Informatics Engineering Student
-      </p>
-      <p class="text-base md:text-lg text-gray-300">
-        <span id="glitch-text" class="glitch-text" data-text="Full Stack Developer">
-          Full Stack Developer
-        </span>
-      </p>
-    </div>
-    
-    <div class="flex justify-center gap-4 md:gap-6 mb-8 md:mb-12 animate-fade-in-delay">
-      <a
-        href="https://github.com/AuroraSauces"
-        target="_blank"
-        class="text-gray-400 hover:text-cyan-400 transition transform hover:scale-110 text-2xl md:text-3xl"
-      >
-        <i class="fa-brands fa-github"></i>
-      </a>
-      <a
-        href="https://www.linkedin.com/in/satria-wiguna-670057349/"
-        target="_blank"
-        class="text-gray-400 hover:text-cyan-400 transition transform hover:scale-110 text-2xl md:text-3xl"
-      >
-        <i class="fa-brands fa-linkedin"></i>
-      </a>
-    </div>
+  <div class="hero-content z-10 w-full max-w-7xl relative">
+    <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+      <!-- Left Column: Text Content -->
+      <div class="text-left animate-fade-in order-2 md:order-1">
+        <div class="inline-block px-4 py-1.5 mb-6 rounded-full border border-cyan-500/30 bg-cyan-500/10 backdrop-blur-sm text-cyan-300 text-sm font-medium tracking-wide">
+          <span class="relative flex h-2 w-2 inline-block mr-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
+          </span>
+          Available for Hire
+        </div>
+        
+        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
+          <span class="block text-gray-100">Hello, I'm</span>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 animate-gradient-x">
+            Satria Wiguna
+          </span>
+        </h1>
+        
+        <div class="text-xl md:text-2xl text-gray-300 mb-8 max-w-lg">
+          <span class="block mb-2">Informatics Engineering Student</span>
+          <span id="glitch-text" class="glitch-text text-cyan-400 font-semibold" data-text="Full Stack Developer">
+            Full Stack Developer
+          </span>
+        </div>
+        
+        <div class="flex flex-wrap gap-4 mb-10">
+          <button
+            data-scroll="projects"
+            class="group relative inline-flex items-center justify-center px-8 py-3.5 overflow-hidden rounded-full font-semibold text-white transition-all duration-300 ease-out bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 hover:-translate-y-1"
+          >
+            <span class="relative flex items-center gap-2">
+              View Work
+              <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+            </span>
+          </button>
+          
+          <button
+            data-scroll="contact" 
+            class="group relative inline-flex items-center justify-center px-8 py-3.5 overflow-hidden rounded-full font-semibold text-cyan-300 transition-all duration-300 ease-out bg-gray-800/50 border border-cyan-500/30 hover:bg-cyan-500/10 hover:border-cyan-400 hover:text-white hover:-translate-y-1"
+          >
+             Contact Me
+          </button>
+        </div>
 
-    <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-      <button
-        data-scroll="about"
-        class="group relative inline-flex items-center justify-center p-[2px] overflow-hidden rounded-full animate-fade-in-delay-2 spin-border-cyan transition-transform hover:scale-105 active:scale-95"
-      >
-        <span class="relative inline-flex h-full w-full items-center gap-2 rounded-full bg-gray-900/90 px-6 md:px-8 py-3 md:py-4 font-semibold text-cyan-300 transition-all duration-300 border border-cyan-500/50 group-hover:bg-gray-800 group-hover:text-cyan-200">
-          Explore Portfolio
-          <i class="fa-solid fa-arrow-down group-hover:translate-y-1 transition-transform"></i>
-        </span>
-      </button>
+        <div class="flex items-center gap-6 text-gray-400">
+           <span class="text-sm font-medium uppercase tracking-wider text-gray-500">Connect:</span>
+           <div class="flex gap-4">
+            <a
+              href="https://github.com/AuroraSauces"
+              target="_blank"
+              class="hover:text-white hover:scale-110 transition-transform duration-300 p-2 rounded-full hover:bg-white/10"
+            >
+              <i class="fa-brands fa-github text-2xl"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/satria-wiguna-670057349/"
+              target="_blank"
+              class="hover:text-[#0A66C2] hover:scale-110 transition-transform duration-300 p-2 rounded-full hover:bg-white/10"
+            >
+              <i class="fa-brands fa-linkedin text-2xl"></i>
+            </a>
+           </div>
+        </div>
+      </div>
 
-      <button
-        data-scroll="contact"
-        class="group inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 md:px-8 py-3 md:py-4 rounded-full hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 font-semibold animate-fade-in-delay-2 text-sm md:text-base"
-      >
-        Contact Me
-        <i class="fa-solid fa-paper-plane group-hover:translate-x-1 transition-transform"></i>
-      </button>
+      <!-- Right Column: Visual Element (3D Satellite Orbit System) -->
+      <div class="relative flex justify-center items-center order-1 md:order-2 animate-fade-in-delay perspective-container h-[450px]">
+        <!-- Main Orbit System (Flat 3D Plane) -->
+        <div class="orbit-system relative w-80 h-80 flex items-center justify-center">
+           
+           <!-- Central Profile/Hub -->
+           <div class="relative z-10 transform-style-3d">
+             <div class="relative w-32 h-32 md:w-44 md:h-44 bg-gray-900 rounded-full border-2 border-cyan-500/50 flex items-center justify-center shadow-[0_0_50px_rgba(34,211,238,0.4)]">
+                <img src="/images/profile.jpg" alt="Satria" class="w-full h-full rounded-full object-cover p-1" />
+                <div class="absolute inset-[-8px] border-2 border-dashed border-cyan-500/30 rounded-full animate-spin-slow"></div>
+             </div>
+           </div>
+
+           <!-- 3D Orbits (Independent Wrappers for Perfect Billboarding) -->
+           
+           <!-- Satellite 1 (Delay 0) -->
+           <div class="satellite-orbit-wrapper delay-0">
+             <div class="satellite-counter-rotator delay-0">
+                <div class="satellite-icon-box bg-gray-900 p-3 rounded-full border border-cyan-500/50 shadow-[0_0_15px_rgba(34,211,238,0.4)]">
+                   <img id="tech-icon-1" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" class="w-8 h-8 md:w-10 md:h-10" />
+                </div>
+             </div>
+           </div>
+
+           <!-- Satellite 2 (Delay -5s = 90deg) -->
+           <div class="satellite-orbit-wrapper delay-neg-5">
+             <div class="satellite-counter-rotator delay-neg-5">
+                <div class="satellite-icon-box bg-gray-900 p-3 rounded-full border border-blue-500/50 shadow-[0_0_15px_rgba(59,130,246,0.4)]">
+                   <img id="tech-icon-2" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/astro/astro-original.svg" class="w-8 h-8 md:w-10 md:h-10" />
+                </div>
+             </div>
+           </div>
+
+           <!-- Satellite 3 (Delay -10s = 180deg) -->
+           <div class="satellite-orbit-wrapper delay-neg-10">
+             <div class="satellite-counter-rotator delay-neg-10">
+                <div class="satellite-icon-box bg-gray-900 p-3 rounded-full border border-purple-500/50 shadow-[0_0_15px_rgba(168,85,247,0.4)]">
+                   <img id="tech-icon-3" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" class="w-8 h-8 md:w-10 md:h-10" />
+                </div>
+             </div>
+           </div>
+
+           <!-- Satellite 4 (Delay -15s = 270deg) -->
+           <div class="satellite-orbit-wrapper delay-neg-15">
+             <div class="satellite-counter-rotator delay-neg-15">
+                <div class="satellite-icon-box bg-gray-900 p-3 rounded-full border border-emerald-500/50 shadow-[0_0_15px_rgba(16,185,129,0.4)]">
+                   <img id="tech-icon-4" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg" class="w-8 h-8 md:w-10 md:h-10" />
+                </div>
+             </div>
+           </div>
+
+           <!-- Visible Orbit Ring -->
+           <div class="absolute inset-[-50px] border border-cyan-500/20 rounded-full orbit-ring transform-style-3d pointer-events-none"></div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -61,13 +132,78 @@
     <div class="hero-circle hero-circle-2"></div>
     <div class="hero-circle hero-circle-3"></div>
     
-    <div class="geometric-shape shape-1"></div>
-    <div class="geometric-shape shape-2"></div>
-    <div class="geometric-shape shape-3"></div>
-    <div class="geometric-shape shape-4"></div>
+    <!-- Geometric shapes removed for cleaner circuit look -->
     
     <div class="grid-pattern"></div>
     
+    <div class="grid-pattern"></div>
+    
+    <!-- Circuit Board Animation (Enhanced Visibility) -->
+    <div class="circuit-container absolute inset-0 pointer-events-none opacity-80">
+      <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <filter id="glow-trace">
+            <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+            <feMerge>
+              <feMergeNode in="coloredBlur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+        </defs>
+        
+        <!-- Circuit Lines Top Left -->
+        <g class="circuit-group top-left" transform="translate(50, 50)">
+           <path d="M0,0 H150 L200,50 H400" stroke="rgba(34,211,238,0.3)" stroke-width="2" fill="none" filter="url(#glow-trace)" />
+           <path d="M0,30 H120 L170,80 H400" stroke="rgba(34,211,238,0.3)" stroke-width="2" fill="none" filter="url(#glow-trace)" />
+           <path d="M0,60 H90 L140,110 H400" stroke="rgba(34,211,238,0.3)" stroke-width="2" fill="none" filter="url(#glow-trace)" />
+           <path d="M50,150 V50" stroke="rgba(34,211,238,0.2)" stroke-width="1" fill="none" />
+           
+           <!-- Moving Pulses -->
+           <circle r="3" fill="#22d3ee" filter="url(#glow-trace)">
+             <animateMotion dur="3s" repeatCount="indefinite" path="M0,0 H150 L200,50 H400" />
+             <animate attributeName="opacity" values="0;1;0" dur="3s" repeatCount="indefinite" />
+           </circle>
+           <circle r="3" fill="#3b82f6" filter="url(#glow-trace)">
+             <animateMotion dur="4s" begin="0.5s" repeatCount="indefinite" path="M0,30 H120 L170,80 H400" />
+             <animate attributeName="opacity" values="0;1;0" dur="4s" repeatCount="indefinite" />
+           </circle>
+        </g>
+        
+        <!-- Circuit Lines Bottom Right (Rotated/Mirrored via path coords approx) -->
+         <g class="circuit-group bottom-right" transform="translate(0, 0)"> 
+             <!-- We use percentage-like absolute coords for bottom right by drawing paths strictly -->
+         </g>
+        
+        <!-- Large Traces Crossing Screen -->
+        <path class="circuit-path" d="M-100,500 L300,500 L400,600 L800,600" stroke="rgba(59,130,246,0.3)" stroke-width="2" fill="none" filter="url(#glow-trace)" />
+        <circle r="3" fill="#3b82f6" filter="url(#glow-trace)">
+             <animateMotion dur="8s" repeatCount="indefinite" path="M-100,500 L300,500 L400,600 L800,600" />
+             <animate attributeName="opacity" values="0;1;0" dur="8s" repeatCount="indefinite" />
+        </circle>
+
+        <path class="circuit-path" d="M1000,150 L800,150 L700,250 L500,250" stroke="rgba(168,85,247,0.3)" stroke-width="2" fill="none" filter="url(#glow-trace)" />
+        <circle r="3" fill="#a855f7" filter="url(#glow-trace)">
+             <animateMotion dur="7s" repeatCount="indefinite" path="M1000,150 L800,150 L700,250 L500,250" />
+             <animate attributeName="opacity" values="0;1;0" dur="7s" repeatCount="indefinite" />
+        </circle>
+        
+        <!-- Vertical Data Line -->
+        <path class="circuit-path" d="M200,800 L200,600 L250,550 L250,300" stroke="rgba(34,211,238,0.2)" stroke-width="1" fill="none" />
+         <circle r="2" fill="#22d3ee">
+             <animateMotion dur="5s" repeatCount="indefinite" path="M200,800 L200,600 L250,550 L250,300" />
+             <animate attributeName="opacity" values="0;1;0" dur="5s" repeatCount="indefinite" />
+        </circle>
+      </svg>
+      
+      <!-- PCB Dots Grid (More Visible) -->
+      <div class="absolute right-10 top-20 w-48 h-48 opacity-40" 
+           style="background-image: radial-gradient(#22d3ee 1.5px, transparent 1.5px); background-size: 15px 15px;">
+      </div>
+      <div class="absolute left-10 bottom-20 w-48 h-48 opacity-40" 
+           style="background-image: radial-gradient(#3b82f6 1.5px, transparent 1.5px); background-size: 15px 15px;">
+      </div>
+    </div>
+
     <div id="particles-container"></div>
     
     <div class="glow-effect glow-1"></div>
@@ -81,87 +217,239 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
+    // --- Glitch Text Logic (Existing) ---
     const target = document.getElementById('glitch-text');
-    if (!target) return;
+    if (target) {
+        const phrases = ['Full Stack Developer', 'Game Development Enthusiast'];
+        const longestPhraseLength = Math.max(...phrases.map((p) => p.length));
+        target.style.minWidth = `${longestPhraseLength}ch`;
+        target.style.display = 'inline-flex';
+        target.style.justifyContent = 'flex-start';
+        target.style.textAlign = 'left';
+        
+        const chars = '!<>-_\\/[]{}—=+*^?#________';
+        const holdDuration = 2600;
+        let frame = 0;
+        let queue = [];
+        let frameRequest;
+        let phraseIndex = 0;
 
-    const phrases = ['Full Stack Developer', 'Game Development Enthusiast'];
-    const longestPhraseLength = Math.max(...phrases.map((p) => p.length));
-    target.style.minWidth = `${longestPhraseLength}ch`;
-    target.style.display = 'inline-flex';
-    target.style.justifyContent = 'center';
-    target.style.textAlign = 'center';
-    const chars = '!<>-_\\/[]{}—=+*^?#________';
-    const holdDuration = 2600;
-    let frame = 0;
-    let queue = [];
-    let frameRequest;
-    let phraseIndex = 0;
+        const randomChar = () => chars[Math.floor(Math.random() * chars.length)];
 
-    const randomChar = () => chars[Math.floor(Math.random() * chars.length)];
+        const update = () => {
+        let output = '';
+        let complete = 0;
 
-    const update = () => {
-      let output = '';
-      let complete = 0;
+        queue.forEach(item => {
+            if (frame >= item.end) {
+            complete++;
+            output += item.to;
+            return;
+            }
 
-      queue.forEach(item => {
-        if (frame >= item.end) {
-          complete++;
-          output += item.to;
-          return;
-        }
+            if (frame >= item.start) {
+            output += `<span class="glitch-char">${randomChar()}</span>`;
+            return;
+            }
 
-        if (frame >= item.start) {
-          output += `<span class="glitch-char">${randomChar()}</span>`;
-          return;
-        }
-
-        output += item.from;
-      });
-
-      target.innerHTML = output;
-      target.setAttribute('data-text', phrases[phraseIndex]);
-      target.classList.add('glitching');
-
-      if (complete === queue.length) {
-        target.textContent = phrases[phraseIndex];
-        target.classList.remove('glitching');
-        setTimeout(nextPhrase, holdDuration);
-        return;
-      }
-
-      frame++;
-      frameRequest = requestAnimationFrame(update);
-    };
-
-    const setText = (newText) => {
-      const oldText = target.textContent || '';
-      const length = Math.max(oldText.length, newText.length);
-      queue = [];
-
-      for (let i = 0; i < length; i++) {
-        queue.push({
-          from: oldText[i] || '',
-          to: newText[i] || '',
-          start: Math.floor(Math.random() * 16),
-          end: Math.floor(Math.random() * 16) + 16,
+            output += item.from;
         });
-      }
 
-      cancelAnimationFrame(frameRequest);
-      frame = 0;
-      update();
+        target.innerHTML = output;
+        target.setAttribute('data-text', phrases[phraseIndex]);
+        target.classList.add('glitching');
+
+        if (complete === queue.length) {
+            target.textContent = phrases[phraseIndex];
+            target.classList.remove('glitching');
+            setTimeout(nextPhrase, holdDuration);
+            return;
+        }
+
+        frame++;
+        frameRequest = requestAnimationFrame(update);
+        };
+
+        const setText = (newText) => {
+        const oldText = target.textContent || '';
+        const length = Math.max(oldText.length, newText.length);
+        queue = [];
+
+        for (let i = 0; i < length; i++) {
+            queue.push({
+            from: oldText[i] || '',
+            to: newText[i] || '',
+            start: Math.floor(Math.random() * 16),
+            end: Math.floor(Math.random() * 16) + 16,
+            });
+        }
+
+        cancelAnimationFrame(frameRequest);
+        frame = 0;
+        update();
+        };
+
+        const nextPhrase = () => {
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        setText(phrases[phraseIndex]);
+        };
+
+        setTimeout(nextPhrase, holdDuration);
+    }
+
+    // --- Tech Icon Swapping Logic ---
+    // --- Tech Icon Swapping Logic ---
+    const techIcons = [
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/astro/astro-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dot-net/dot-net-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unity/unity-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg"
+    ];
+
+    // Indices of currently displayed icons (initially 0, 1, 2, 3)
+    let currentIndices = [0, 1, 2, 3];
+    
+    // We want to swap one icon every few seconds, sequentially.
+    // Slots: 1, 2, 3, 4
+    // We can just use a single interval that targets the "next" slot in round-robin.
+    
+    let nextSlotToUpdate = 0; // 0 to 3
+    let nextTechIndex = 4; // Start taking from index 4
+
+    const updateIcon = () => {
+        const slotId = `tech-icon-${nextSlotToUpdate + 1}`;
+        const img = document.getElementById(slotId);
+        
+        if (img) {
+            // Fade out
+            img.style.opacity = '0';
+            img.style.transform = 'scale(0.8)'; // Subtle shrink effect
+            
+            setTimeout(() => {
+                // Change source
+                img.src = techIcons[nextTechIndex];
+                
+                // Fade in
+                img.style.opacity = '1';
+                img.style.transform = 'scale(1)';
+                
+                // Update indices for next round
+                currentIndices[nextSlotToUpdate] = nextTechIndex;
+                
+                // Advance pointers
+                nextTechIndex = (nextTechIndex + 1) % techIcons.length;
+                nextSlotToUpdate = (nextSlotToUpdate + 1) % 4; // Cycle through slots 0->1->2->3->0
+                
+            }, 1000); // Wait 1s for fade out (matches CSS transition)
+        }
     };
 
-    const nextPhrase = () => {
-      phraseIndex = (phraseIndex + 1) % phrases.length;
-      setText(phrases[phraseIndex]);
-    };
+    // Swap an icon every 3 seconds (so full cycle of 4 slots takes 12s)
+    setInterval(updateIcon, 3000); 
 
-    setTimeout(nextPhrase, holdDuration);
   });
+
 </script>
 
 <style>
+  /* 3D Container Setup */
+  .perspective-container {
+    perspective: 1000px;
+  }
+
+  .orbit-system {
+    transform-style: preserve-3d;
+    transform: rotateX(15deg) rotateY(15deg); /* Slight initial tilt */
+    animation: floatingTilt 10s ease-in-out infinite;
+  }
+
+  .transform-style-3d {
+    transform-style: preserve-3d;
+  }
+
+  /* Orbit Animation */
+  .satellite-orbit-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* Start at center, then transforms move it out */
+    width: 0;
+    height: 0;
+    transform-style: preserve-3d;
+    animation: orbit3D 20s linear infinite;
+  }
+
+  /* Individual Delays to space them out (20s / 4 = 5s) */
+  .delay-0 { animation-delay: 0s; }
+  .delay-neg-5 { animation-delay: -5s; }
+  .delay-neg-10 { animation-delay: -10s; }
+  .delay-neg-15 { animation-delay: -15s; }
+
+  @keyframes orbit3D {
+    0% {
+      transform: rotateY(0deg) translateZ(220px); 
+    }
+    100% {
+      transform: rotateY(360deg) translateZ(220px);
+    }
+  }
+
+  /* Orbit Ring Visual */
+  .orbit-ring {
+    transform: rotateX(90deg) translateZ(0);
+    border-style: solid;
+    border-width: 1px;
+    opacity: 0.3;
+    /* This ring might look weird if it intersects the face roughly. 
+       Let's try to match the orbit path roughly.
+       The path is a circle in X-Z plane.
+       So a div with border-radius 50% rotated X 90deg lies in X-Z plane.
+    */
+    width: 440px; /* 2 * radius (220) */
+    height: 440px;
+    top: 50%;
+    left: 50%;
+    margin-top: -220px;
+    margin-left: -220px;
+  }
+
+  @keyframes floatingTilt {
+     0%, 100% { transform: rotateX(10deg); }
+     50% { transform: rotateX(-10deg); }
+  }
+
+  /* Fade Animations (Standard) */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .animate-fade-in { animation: fadeIn 1s ease-out; }
+  .animate-fade-in-delay { animation: fadeIn 1s ease-out 0.3s both; }
+  .animate-fade-in-delay-2 { animation: fadeIn 1s ease-out 0.6s both; }
+  
+  .animate-spin-slow { animation: spin 10s linear infinite; }
+  @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+  .animate-gradient-x { background-size: 200% 200%; animation: gradientMove 8s ease infinite; }
+  @keyframes gradientMove { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+
   .hero-section {
     position: relative;
     min-height: 100vh;
@@ -173,13 +461,13 @@
     position: relative;
     display: inline-flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start; /* Changed from center */
     font-weight: 600;
     letter-spacing: 0.04em;
     color: #e5e7eb;
     min-height: 1.5em;
-    padding: 0 0.35rem;
-    text-align: center;
+    padding: 0; /* Removed horizontal padding */
+    text-align: left; /* Changed from center */
     white-space: nowrap;
   }
 
@@ -450,5 +738,114 @@
       opacity: 1;
       transform: translateY(0);
     }
+  }
+
+  /* Holographic Card Animations */
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  
+  .transform-style-3d {
+    transform-style: preserve-3d;
+  }
+  
+  .animate-float-slow {
+    animation: floatCard 6s ease-in-out infinite;
+  }
+  
+  @keyframes floatCard {
+    0%, 100% { transform: translateY(0) rotateX(0) rotateY(0); }
+    50% { transform: translateY(-20px) rotateX(2deg) rotateY(-2deg); }
+  }
+  
+  .animate-spin-slow {
+    animation: spin 10s linear infinite;
+  }
+
+  .animate-reverse-spin {
+    animation: spin 15s linear infinite reverse;
+  }
+  
+  .animate-spin-very-slow {
+    animation: spin 20s linear infinite;
+  }
+  
+  .animate-counter-spin {
+    animation: spin 20s linear infinite reverse; /* Counteracts parent rotation to keep icons upright if desired, or just adds complexity */
+  }
+
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  .animate-pulse-slow {
+    animation: pulse 4s ease-in-out infinite;
+  }
+  
+  .animate-gradient-x {
+    background-size: 200% 200%;
+    animation: gradientMove 8s ease infinite;
+  }
+  
+  @keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* New 3D Animation Structure */
+  .orbit-system {
+    transform-style: preserve-3d;
+  }
+
+  /* Independent Wrapper Animation */
+  .satellite-orbit-wrapper {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      transform-style: preserve-3d;
+      animation: orbitRotation 20s linear infinite;
+  }
+
+  /* Counter Animation */
+  .satellite-counter-rotator {
+      animation: counterRotation 20s linear infinite;
+      transform-style: preserve-3d;
+  }
+
+  /* Delays must apply to both the orbit AND the counter-rotation to stay synced */
+  .delay-0 { animation-delay: 0s; }
+  .delay-neg-5 { animation-delay: -5s; }
+  .delay-neg-10 { animation-delay: -10s; }
+  .delay-neg-15 { animation-delay: -15s; }
+
+  .satellite-icon-box {
+      /* Centered box for the icon */
+      transform: translate(-50%, -50%);
+      width: 4rem; 
+      height: 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /* Ensures visibility */
+      backface-visibility: visible;
+      -webkit-backface-visibility: visible;
+  }
+
+  .satellite-icon-box img {
+      transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  }
+
+  @keyframes orbitRotation {
+    from { transform: rotateY(0deg) translateZ(220px); }
+    to { transform: rotateY(360deg) translateZ(220px); }
+  }
+
+  @keyframes counterRotation {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(-360deg); }
   }
 </style>
